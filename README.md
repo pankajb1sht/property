@@ -1,7 +1,5 @@
 # Mansio - Immersive Real Estate Discovery Platform
 
-![Mansio Logo](public/mansio-logo.png)
-
 Mansio revolutionizes real estate discovery by combining immersive video experiences with social-inspired interactions, making property hunting engaging and efficient.
 
 ## 🌟 Key Features
@@ -154,44 +152,3 @@ VITE_STORAGE_URL=your_storage_url
 - Rate limiting
 - Secure data transmission
 
-## 🎯 Future Roadmap
-
-### Phase 1: Enhanced Discovery
-- AI-powered property recommendations
-- Virtual staging
-- 3D property tours
-
-### Phase 2: Social Features
-- Property reviews
-- Community discussions
-- Market insights
-
-### Phase 3: Transaction Tools
-- Document signing
-- Payment processing
-- Escrow integration
-
-## 📈 Performance Metrics
-
-- First Contentful Paint: < 1.5s
-- Time to Interactive: < 2.5s
-- Lighthouse Score: > 90
-- Core Web Vitals: All passed
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Design inspiration from modern social platforms
-- Built with cutting-edge web technologies
-- Focused on user experience and performance
-
----
-
-For more information, contact us at contact@mansio.com
