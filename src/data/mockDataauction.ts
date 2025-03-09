@@ -1,0 +1,203 @@
+import type { Auction } from '@/types/auction';
+
+export const mockProperties = [
+  {
+    id: '1',
+    title: 'Modern Luxury Villa',
+    description: 'Stunning modern villa with panoramic ocean views',
+    price: 1200000,
+    location: 'Malibu, CA',
+    bedrooms: 4,
+    bathrooms: 3.5,
+    squareFootage: 3200,
+    images: [
+      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop',
+    ],
+    features: ['Pool', 'Ocean View', 'Smart Home', 'EV Charging'],
+    type: 'house',
+    yearBuilt: 2020,
+    parkingSpaces: 2,
+    status: 'for-sale',
+  },
+  {
+    id: '2',
+    title: 'Downtown Penthouse',
+    description: 'Luxurious penthouse in the heart of downtown',
+    price: 850000,
+    location: 'Los Angeles, CA',
+    bedrooms: 3,
+    bathrooms: 2,
+    squareFootage: 2100,
+    images: [
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop',
+    ],
+    features: ['City View', 'Concierge', 'Gym', 'Rooftop Deck'],
+    type: 'apartment',
+    yearBuilt: 2018,
+    parkingSpaces: 2,
+    status: 'for-sale',
+  },
+  {
+    id: '3',
+    title: 'Beachfront Condo',
+    description: 'Direct beach access with stunning views',
+    price: 750000,
+    location: 'Miami Beach, FL',
+    bedrooms: 2,
+    bathrooms: 2,
+    squareFootage: 1500,
+    images: [
+      'https://images.unsplash.com/photo-1669071192880-0a94316e6e09?q=80&w=2070&auto=format&fit=crop',
+    ],
+    features: ['Beach Access', 'Pool', 'Balcony', 'Security'],
+    type: 'condo',
+    yearBuilt: 2015,
+    parkingSpaces: 1,
+    status: 'for-sale',
+  },
+];
+
+export const mockAuctions: Auction[] = [
+  {
+    id: '1',
+    title: 'Luxury Penthouse Suite',
+    location: 'Beverly Hills, CA',
+    description: 'Stunning penthouse with panoramic city views, featuring 3 bedrooms, 3.5 bathrooms, and private terrace.',
+    startPrice: 750000,
+    currentBid: 825000,
+    startDate: new Date(Date.now() - 86400000).toISOString(), // 24h ago
+    endDate: new Date(Date.now() + 172800000).toISOString(), // 48h from now
+    status: 'live',
+    participants: 12,
+    totalBids: 25,
+    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop',
+    features: ['Panoramic Views', 'Private Terrace', 'Smart Home', 'Wine Cellar'],
+    propertyType: 'penthouse',
+    squareFootage: 4200,
+    bedrooms: 3,
+    bathrooms: 3.5,
+    yearBuilt: 2019,
+    lotSize: '0.25 acres',
+    parkingSpaces: 3,
+    seller: {
+      id: 'seller1',
+      name: 'Luxury Estates Inc.',
+      rating: 4.8,
+      totalSales: 45,
+    },
+    bids: [
+      {
+        id: 'bid1',
+        auctionId: '1',
+        userId: 'user1',
+        amount: 825000,
+        timestamp: new Date(Date.now() - 3600000).toISOString(),
+        userDisplayName: 'John D.',
+      },
+    ],
+    viewings: [
+      {
+        date: new Date(Date.now() + 86400000).toISOString(),
+        slots: ['10:00 AM', '2:00 PM', '4:00 PM'],
+      },
+    ],
+    documents: [
+      {
+        title: 'Property Report',
+        url: '/documents/report.pdf',
+        type: 'pdf',
+      },
+    ],
+  },
+  {
+    id: '2',
+    title: 'Historic Victorian Mansion',
+    location: 'San Francisco, CA',
+    description: 'Meticulously restored Victorian mansion with original features, 6 bedrooms, wine cellar, and landscaped gardens.',
+    startPrice: 2200000,
+    currentBid: 2200000,
+    startDate: new Date(Date.now() + 86400000).toISOString(), // 24h from now
+    endDate: new Date(Date.now() + 432000000).toISOString(), // 5 days from now
+    status: 'upcoming',
+    participants: 5,
+    totalBids: 0,
+    image: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2070&auto=format&fit=crop',
+    features: ['Original Features', 'Wine Cellar', 'Garden', 'Period Details'],
+    propertyType: 'house',
+    squareFootage: 6800,
+    bedrooms: 6,
+    bathrooms: 4.5,
+    yearBuilt: 1890,
+    lotSize: '0.5 acres',
+    parkingSpaces: 4,
+    seller: {
+      id: 'seller2',
+      name: 'Heritage Homes',
+      rating: 4.9,
+      totalSales: 28,
+    },
+    bids: [],
+    viewings: [
+      {
+        date: new Date(Date.now() + 172800000).toISOString(),
+        slots: ['11:00 AM', '3:00 PM'],
+      },
+    ],
+    documents: [
+      {
+        title: 'Historical Documentation',
+        url: '/documents/history.pdf',
+        type: 'pdf',
+      },
+    ],
+  },
+  {
+    id: '3',
+    title: 'Oceanfront Modern Villa',
+    location: 'Malibu, CA',
+    description: 'Contemporary beachfront villa with infinity pool, home theater, and private beach access.',
+    startPrice: 3500000,
+    currentBid: 3750000,
+    startDate: new Date(Date.now() - 172800000).toISOString(), // 48h ago
+    endDate: new Date(Date.now() - 3600000).toISOString(), // 1h ago
+    status: 'ended',
+    participants: 15,
+    totalBids: 32,
+    image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop',
+    features: ['Infinity Pool', 'Beach Access', 'Home Theater', 'Smart Home'],
+    propertyType: 'villa',
+    squareFootage: 5500,
+    bedrooms: 5,
+    bathrooms: 5.5,
+    yearBuilt: 2021,
+    lotSize: '0.75 acres',
+    parkingSpaces: 4,
+    seller: {
+      id: 'seller3',
+      name: 'Coastal Properties',
+      rating: 4.7,
+      totalSales: 36,
+    },
+    bids: [
+      {
+        id: 'bid2',
+        auctionId: '3',
+        userId: 'user2',
+        amount: 3750000,
+        timestamp: new Date(Date.now() - 7200000).toISOString(),
+        userDisplayName: 'Sarah M.',
+      },
+    ],
+    viewings: [],
+    documents: [
+      {
+        title: 'Property Specifications',
+        url: '/documents/specs.pdf',
+        type: 'pdf',
+      },
+    ],
+  },
+]; 
